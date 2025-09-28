@@ -1,0 +1,59 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - ask_medical_question
+
+entities:
+  - disease
+
+slots:
+  disease:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: disease
+
+actions:
+  - action_pubmed_qa
+  - utter_greet
+  - utter_cheer_up
+  - utter_did_that_help
+  - utter_happy
+  - utter_goodbye
+  - utter_iamabot
+  - utter_medical_info
+
+responses:
+  utter_greet:
+  - text: "Hello! I'm your Public Health Assistant. I can provide information about various diseases, their symptoms, prevention, and treatment. How can I help you today?"
+
+  utter_cheer_up:
+  - text: "I understand health concerns can be worrying. Remember that early information and prevention are key to good health!"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did this information help you? Would you like to know more about any other health topic?"
+
+  utter_happy:
+  - text: "Great! Feel free to ask me any other health-related questions."
+
+  utter_goodbye:
+  - text: "Stay healthy and take care! Remember to consult a healthcare professional for medical advice."
+
+  utter_iamabot:
+  - text: "I am a Public Health Assistant bot, here to provide general health information. Always consult healthcare professionals for medical diagnoses."
+  
+  utter_medical_info:
+  - text: "I can provide information about diseases like measles, tuberculosis, cholera, flu, COVID-19, malaria, HIV, diabetes, hypertension, asthma and more. What would you like to know?"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

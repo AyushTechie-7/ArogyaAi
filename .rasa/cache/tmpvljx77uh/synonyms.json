@@ -1,0 +1,17 @@
+{
+  "measles": "measles",
+  "tuberculosis": "tuberculosis",
+  "cholera": "cholera",
+  "flu": "flu",
+  "hypertension": "hypertension",
+  "stroke": "stroke",
+  "hiv": "HIV",
+  "asthma": "asthma",
+  "malaria": "malaria",
+  "alzheimer's": "alzheimer's",
+  "lung cancer": "lung cancer",
+  "diabetes": "diabetes",
+  "gout": "gout",
+  "lupus": "lupus",
+  "ebola": "ebola"
+}
